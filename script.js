@@ -1,3 +1,5 @@
+import characterAsset from "./stuart_little_2_margalo_stuart_5_by_giuseppedirosso_dfl0a9p-pre.jpg";
+
 const music = document.getElementById("backgroundMusic");
 const musicToggle = document.getElementById("musicToggle");
 const musicIcon = document.getElementById("musicIcon");
@@ -235,7 +237,7 @@ document.getElementById("passwordForm").addEventListener("submit", (event) => {
   event.preventDefault();
   const input = document.getElementById("passwordInput");
   const message = document.getElementById("passwordMessage");
-  if (input.value === LETTER_PASSWORD) {
+  if (input.value.trim().toLowerCase() === LETTER_PASSWORD) {
     secretLock.classList.add("is-opening");
     message.textContent = "Opening something made just for you ♡";
     setTimeout(() => {
@@ -273,8 +275,7 @@ const revealCharacter = () => {
     );
     return;
   }
-  const imagePath =
-    characterStage.dataset.characterSrc || "assets/our-character.jpg";
+  const imagePath = characterStage.dataset.characterSrc || characterAsset;
   characterImage.onload = () => {
     characterMissing.hidden = true;
     characterPolaroid.hidden = false;

@@ -1014,7 +1014,6 @@ a {
 @keyframes envelope-open { 45% { transform: translateY(-11px) rotate(-2deg); } 100% { opacity: 0; transform: translateY(-34px) rotate(7deg) scale(1.08); } }
 .secret-letter { max-width: 760px; overflow: visible; }
 .secret-letter > p { margin: 0 0 20px; overflow-wrap: anywhere; font: 500 clamp(1rem, 1.55vw, 1.15rem) / 1.85 var(--sans); }
-.secret-letter .letter-missing { padding: 17px 18px; border: 1px dashed rgba(220, 95, 150, 0.46); border-radius: 10px; background: rgba(247, 199, 217, 0.23); color: #76536f; font: italic 18px/1.6 var(--serif); }
 .secret-letter .signature { margin-top: 29px; }
 .secret-letter.is-revealed { animation: letter-arrive .52s ease both; }
 @keyframes letter-arrive { from { opacity: 0; transform: translateY(20px) scale(.985); } to { opacity: 1; transform: none; } }
