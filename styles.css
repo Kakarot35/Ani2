@@ -178,6 +178,30 @@ a {
   color: var(--blush);
   font: italic clamp(2rem, 4.2vw, 4.3rem)/0.8 var(--serif);
 }
+.anniversary-dates {
+  margin: 25px 0 0;
+  color: var(--blush);
+}
+.anniversary-dates p {
+  margin: 0;
+  font: 500 clamp(0.66rem, 1.1vw, 0.82rem) / 1.5 var(--mono);
+  letter-spacing: 0.13em;
+  white-space: nowrap;
+}
+.anniversary-dates p span {
+  display: inline-block;
+  margin-left: 8px;
+  color: var(--ivory);
+  font: 17px var(--serif);
+  vertical-align: -2px;
+}
+.anniversary-dates small {
+  display: block;
+  margin-top: 7px;
+  color: rgba(255, 248, 244, 0.76);
+  font: italic 17px var(--serif);
+  letter-spacing: 0.02em;
+}
 .lede {
   max-width: 365px;
   margin: 28px 0 31px;
@@ -336,6 +360,22 @@ a {
 }
 .photo-strip .focus-photo img {
   aspect-ratio: 4/5;
+}
+.memory-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 240px));
+  justify-content: center;
+  gap: clamp(18px, 4vw, 58px);
+  margin: 53px auto 0;
+}
+.memory-gallery figure {
+  width: 100%;
+  margin: 0;
+}
+.memory-gallery img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
 }
 .slide-note {
   margin: 35px 0 0;
@@ -561,6 +601,9 @@ a {
 .video-wall video:not(:first-child) {
   aspect-ratio: 9/13;
 }
+.video-wall video:nth-child(n + 4) {
+  aspect-ratio: auto;
+}
 .secret-slide {
   text-align: center;
 }
@@ -779,6 +822,13 @@ a {
   .intro-copy h1 em {
     font-size: clamp(2rem, 10vw, 3.2rem);
   }
+  .anniversary-dates {
+    margin-top: 22px;
+  }
+  .anniversary-dates p {
+    font-size: clamp(0.6rem, 2.7vw, 0.72rem);
+    letter-spacing: 0.08em;
+  }
   .lede {
     margin: 24px auto 28px;
   }
@@ -825,6 +875,15 @@ a {
   .photo-strip img,
   .photo-strip .focus-photo img {
     aspect-ratio: 4/5;
+  }
+  .memory-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 37px;
+  }
+  .memory-gallery figure {
+    min-width: 0;
+    transform: none;
   }
   .slide-note {
     margin-top: 25px;
@@ -875,6 +934,9 @@ a {
   .video-wall video:first-child {
     max-height: none;
     aspect-ratio: 16/10;
+  }
+  .video-wall video:nth-child(n + 4) {
+    aspect-ratio: auto;
   }
   .secret-panel,
   .secret-letter {

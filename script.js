@@ -228,7 +228,7 @@ quizForm.addEventListener("submit", (event) => {
 renderQuiz();
 
 // Change this value before sharing the final website. This is a front-end lock, not secure storage.
-const LETTER_PASSWORD = "I love talking to you";
+const LETTER_PASSWORD = "i love talking to you";
 const secretLock = document.getElementById("secretLock");
 const secretLetter = document.getElementById("secretLetter");
 document.getElementById("passwordForm").addEventListener("submit", (event) => {
