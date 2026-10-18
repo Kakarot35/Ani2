@@ -18,5 +18,5 @@ document.getElementById('rainButton').addEventListener('click',rain);document.ge
 document.getElementById('quizForm').addEventListener('submit',event=>{event.preventDefault();const answer=new FormData(event.currentTarget).get('answer');const result=document.getElementById('quizResult');result.textContent=answer?'Correct. The answer was always you ♡':'Pick an answer first — Kuromi is waiting!';if(answer)rain();});
 
 // Change this value before sharing the final website. This is a front-end lock, not secure storage.
-const LETTER_PASSWORD='change-me';
+const LETTER_PASSWORD='I love talking to you';
 document.getElementById('passwordForm').addEventListener('submit',event=>{event.preventDefault();const input=document.getElementById('passwordInput');const message=document.getElementById('passwordMessage');if(input.value===LETTER_PASSWORD){document.getElementById('secretLock').hidden=true;document.getElementById('secretLetter').hidden=false;rain();}else{message.textContent='That password is not quite right. Try again ♡';input.select();}});
