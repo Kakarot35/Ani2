@@ -1,0 +1,2 @@
+/* Keeps decorative background layers from widening the document without clipping content. */
+.slide{contain:paint}.hero-card{max-width:100%}@media(max-width:760px){.hero-card{align-self:stretch;width:100%!important;max-width:335px!important;margin-inline:auto;transform:none}.hero-card img{width:100%}.video-wall{max-width:100%}.kuromi-card{max-width:190px}}
